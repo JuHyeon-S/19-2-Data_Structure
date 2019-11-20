@@ -1,0 +1,22 @@
+package day5;
+
+public class CListRotateTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		CListRotate<Integer> s = new CListRotate<Integer>();
+		
+		s.insert(4);
+		s.insert(3);
+		s.insert(2);
+		s.insert(1);
+		
+		s.print();
+		System.out.println();
+		
+		s.rotateRight(2);
+		s.print();
+		
+	}
+
+}

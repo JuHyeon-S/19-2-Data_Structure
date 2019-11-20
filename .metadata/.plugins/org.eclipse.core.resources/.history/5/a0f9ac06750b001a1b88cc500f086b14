@@ -1,0 +1,68 @@
+package day11;
+
+public class LinearProbing2<K, V> {
+	private int M = 13;
+	private K[] a = (K[]) new Object[M];
+	private V[] d = (V[]) new Object[M];
+
+	private int hash(K key) {
+		return (key.hashCode() & 0x7fffffff) % M;
+	}
+
+	public void put(K key, V data) {
+		int initialpos = hash(key);
+		int i = initialpos, j = 1;
+		do {
+			if(a[i] == null) {
+				a[i] = key;
+				d[i] = data;
+				return;
+			}
+			if (a[i].equals(key)) {
+				d[i] = data;
+				return;
+			}
+			i = (initialpos + j++) %M;
+		}while (i != initialpos);
+	}
+	
+	public V get(K key) {
+		int initialpos = hash(key);
+		int i = initialpos, j = 1;
+		do {
+			if(a[i].equals(key)) return d[i];
+			i = (initialpos + j++) % M;
+		}while(a[i] != null && i != initialpos);
+		
+		return null;
+	}
+	
+	public void print() {
+		for (int i = 0; i < a.length; i++) {
+			System.out.print("\t"+i);
+		}
+		System.out.println();
+		for (int i = 0; i < a.length; i++) {
+			System.out.print("\t"+a[i]);
+		}
+	}
+	
+	public V delete(K key) {
+		int initialpos = hash(key);
+		int i = initialpos, j = 1;
+		V data = null;
+		V re;
+		do {		
+			if (a[i].equals(key)) {
+				data = d[i];
+				d[i] = null;
+				a[i] = (K) re;
+				return data;
+			}	
+			re = d[i];
+			i = (initialpos + j++) %M;
+		}while (i != initialpos);
+		return null;
+	}
+}
+

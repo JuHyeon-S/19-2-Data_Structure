@@ -1,0 +1,15 @@
+package day1;
+
+public class StudentInfo {
+	String deptName;
+	int ID;
+	
+	StudentInfo(String deptName, int ID){
+		this.deptName = deptName;
+		this.ID = ID;
+	}
+	
+	void printPersonInfo(String deptName, int ID) {
+		System.out.println("deptName : "+ this.deptName +"\nID : "+this.ID);
+	}
+}

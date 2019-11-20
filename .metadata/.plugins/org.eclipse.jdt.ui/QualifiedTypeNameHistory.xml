@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="day5.SListReverse"/>
+    <fullyQualifiedTypeName name="day5.DListAdd"/>
+    <fullyQualifiedTypeName name="java.lang.Math"/>
+    <fullyQualifiedTypeName name="jdk.nashorn.api.tree.NewTree"/>
+    <fullyQualifiedTypeName name="day7.ListQueue"/>
+    <fullyQualifiedTypeName name="java.util.NoSuchElementException"/>
+    <fullyQualifiedTypeName name="day6.EqStack"/>
+    <fullyQualifiedTypeName name="day6.calcStack"/>
+    <fullyQualifiedTypeName name="day7.LQReverse"/>
+    <fullyQualifiedTypeName name="day7.AnimalShelter"/>
+    <fullyQualifiedTypeName name="java.util.LinkedList"/>
+</qualifiedTypeNameHistroy>

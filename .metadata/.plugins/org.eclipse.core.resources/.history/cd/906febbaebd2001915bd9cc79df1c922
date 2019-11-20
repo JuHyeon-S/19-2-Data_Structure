@@ -1,0 +1,36 @@
+package day2;
+
+class TermInput {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+	
+	public static void Integer(int input) {
+		int []num = new int[100];
+		
+		for(int i = 0; i < num.length; i++) {
+			num[i] = i+1;
+		}
+		int rst = 0;
+		for (int x = 0; x < num.length; x++) {
+			for (int y = 0; y < num.length; y++) {
+				if (x == y) continue;
+				for (int z = 0; z < num.length; z++) {
+					if (y == z || x == z) continue;
+					if ((num[x] + num[y]+num[z]) == input) {
+						rst = 1;
+						break;
+					}
+				}
+			}
+		}
+		if (rst == 1) {
+			System.out.println(input+"Àº ("+);
+		}
+	}
+
+}
+
+

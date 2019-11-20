@@ -1,0 +1,21 @@
+package day1;
+import java.util.*;
+
+public class FactorialRecursive {
+	
+	public static int fac(int a) {
+		if (a == 1) {
+			return 1; 
+		}
+		else return a*fac(a-1);
+	}
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.println("숫자를 입력하세요 : ");
+		int num = scan.nextInt();
+		
+		System.out.println(num+"!은 "+fac(num)+"입니다.");
+	}
+
+}
